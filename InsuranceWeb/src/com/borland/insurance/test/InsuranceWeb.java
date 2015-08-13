@@ -39,7 +39,7 @@ public class InsuranceWeb {
 		keywords.fillOutCarInfo(2012, "Buick", "Electra", FinacialInfo.OWN);
 
 		desktop.logInfo("Quote", TruelogScreenshotMode.ActiveWindow);
-		DomElement quoteResultFinalp = desktop.<DomElement> find("//SPAN[@id='quote-result:final-price']");
+		DomElement quoteResultFinalp = browser.<DomElement> find("//B[@textContents='USD*']");
 		Assert.assertEquals("USD 1.190,00", quoteResultFinalp.getText());
 		desktop.<DomLink> find("//A[@textContents='Home']").domClick();
 	}

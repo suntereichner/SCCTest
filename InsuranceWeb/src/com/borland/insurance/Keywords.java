@@ -1,6 +1,7 @@
 package com.borland.insurance;
 
-import junit.framework.Assert;
+
+import org.junit.Assert;
 
 import com.borland.silk.keyworddriven.annotations.Argument;
 import com.borland.silk.keyworddriven.annotations.Keyword;
@@ -19,7 +20,6 @@ import com.borland.silktest.jtf.xbrowser.DomLink;
 import com.borland.silktest.jtf.xbrowser.DomListBox;
 import com.borland.silktest.jtf.xbrowser.DomRadioButton;
 import com.borland.silktest.jtf.xbrowser.DomTextField;
-import com.borland.silktest.jtf.common.types.Point;
 
 public class Keywords {
 	private Desktop desktop = new Desktop();
