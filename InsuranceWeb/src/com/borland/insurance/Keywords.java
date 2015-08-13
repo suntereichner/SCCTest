@@ -10,6 +10,7 @@ import com.borland.silktest.jtf.Desktop;
 import com.borland.silktest.jtf.common.BrowserType;
 import com.borland.silktest.jtf.common.CommonOptions;
 import com.borland.silktest.jtf.common.TruelogScreenshotMode;
+import com.borland.silktest.jtf.common.UnsupportedMethodException;
 import com.borland.silktest.jtf.common.types.FindOptions;
 import com.borland.silktest.jtf.common.types.MouseButton;
 import com.borland.silktest.jtf.xbrowser.BrowserApplication;
@@ -32,7 +33,11 @@ public class Keywords {
 	@Keyword("Login")
 	public String login(String username, String password) {
 		BrowserApplication bw = desktop.find("//BrowserApplication");
-		bw.setActive();
+		try {
+			bw.setActive();
+		} catch (UnsupportedMethodException e) {
+			// only for edge
+		}
 		BrowserWindow browser = bw
 				.find("//BrowserWindow");
 
