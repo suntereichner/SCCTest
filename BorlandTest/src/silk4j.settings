@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recorderProject version="15.0">
+<recorderProject version="16.5">
   <applicationConfiguration>
-    <type>Browser</type>
     <moduleNamePattern>*\IEXPLORE.EXE</moduleNamePattern>
+    <browserType>InternetExplorer</browserType>
     <baseStateInfo>
       <locator>//BrowserApplication</locator>
       <url>http://www.borland.com</url>
-      <browserType>InternetExplorer</browserType>
     </baseStateInfo>
   </applicationConfiguration>
   <agentOptions>

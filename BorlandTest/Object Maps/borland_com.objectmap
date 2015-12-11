@@ -1,0 +1,8 @@
+<ObjectMap version="1">
+  <ObjectMapEntry id="borland_com" locator="//BrowserApplication" urlPattern="*borland.com*">
+    <ObjectMapEntry id="BrowserWindow" locator="//BrowserWindow">
+      <ObjectMapEntry id="Home" locator="//A[@textContents=&apos;Home&apos;]"/>
+      <ObjectMapEntry id="Trials »" locator="//SPAN[@textContents=&apos;Trials »&apos;]"/>
+    </ObjectMapEntry>
+  </ObjectMapEntry>
+</ObjectMap>

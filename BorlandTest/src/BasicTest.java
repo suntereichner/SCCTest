@@ -6,6 +6,10 @@ import com.borland.silktest.jtf.Desktop;
 import com.borland.silktest.jtf.common.BrowserType;
 import com.borland.silktest.jtf.common.CommonOptions;
 import com.borland.silktest.jtf.common.TruelogScreenshotMode;
+import com.borland.silktest.jtf.xbrowser.DomElement;
+import com.borland.silktest.jtf.common.types.MouseButton;
+import com.borland.silktest.jtf.common.types.Point;
+import com.borland.silktest.jtf.xbrowser.DomLink;
 
 public class BasicTest {
 
@@ -28,5 +32,13 @@ public class BasicTest {
 	public void validateAppearance() {
 		// Add a screenshot of the browser to the result
 		desktop.logInfo("Screenshot", TruelogScreenshotMode.ActiveApplication);
+	}
+
+	@Test
+	public void simpleTest() {
+		desktop.<DomElement> find("borland_com.BrowserWindow.Trials »").click(
+				MouseButton.LEFT, new Point(22, 9));
+		desktop.<DomLink> find("borland_com.BrowserWindow.Home").click(
+				MouseButton.LEFT, new Point(32, 10));
 	}
 }
